@@ -4,8 +4,8 @@ from pydantic import BaseModel
 from supabase import create_client, Client
 
 # Configura tus credenciales de Supabase
-URL = "TU_URL_DE_SUPABASE"
-KEY = "TU_API_KEY_DE_SUPABASE"
+URL = "https://ahwpmrurpeljpfyjjhgv.supabase.co"
+KEY = "sb_publishable_LOFP5bUx1aGBzTailryBnQ_u_jpbWAK"
 supabase: Client = create_client(URL, KEY)
 
 app = FastAPI()
@@ -48,4 +48,5 @@ async def validar_escaneo(data: Escaneo):
         "status": "success",
         "nombre": punto.data['nombre'],
         "premio": punto.data['recompensa_texto']
+
     }
